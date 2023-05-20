@@ -1,0 +1,313 @@
+[
+  {
+    "name": "Контейнер для приема баночки из-под продукции \"Эвалар\" в аптеке \"Эвалар\"",
+    "type": [
+      "Plastic"
+    ],
+    "address": "г. Москва, ул. Тверская, д. 4",
+    "coordinates": {
+      "latitude": 55.758156,
+      "longitude": 37.613571
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 692-39-11",
+    "email": "commerce.msk@evalar.com",
+    "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+  },
+  {
+    "name": "Контейнер для приема баночки из-под продукции \"Эвалар\" в аптеке \"Эвалар\"",
+    "type": [
+      "Plastic"
+    ],
+    "address": "г. Москва, ул. Мясницкая, д. 24/7, стр. 2",
+    "coordinates": {
+      "latitude": 55.763297,
+      "longitude": 37.635654
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 623-33-40",
+    "email": "commerce.msk@evalar.com",
+    "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+  },
+  {
+    "name": "Контейнер для приема баночки из-под продукции \"Эвалар\" в аптеке \"Эвалар\"",
+    "type": [
+      "Plastic"
+    ],
+    "address": "г. Москва, Калужская пл., д. 1, к. 1",
+    "coordinates": {
+      "latitude": 55.728326,
+      "longitude": 37.611781
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 499 230-18-71",
+    "email": "commerce.msk@evalar.com",
+    "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+  },
+  {
+    "name": "Точка приема крышечек, батареек, пластиковых карточек, книг в магазине \"ВкусВилл\"",
+    "type": [
+      "Paper",
+      "Plastic"
+    ],
+    "address": "г. Москва, пер. Сивцев Вражек, д. 20",
+    "coordinates": {
+      "latitude": 55.747725,
+      "longitude": 37.593718
+    },
+    "schedule": "9:00-22:00",
+    "telephone": "+7 925 265-94-50",
+    "email": "info@izbenka.msk.ru",
+    "website": "https://vkusvill.ru/"
+  },
+  {
+    "name": "Контейнеры для вторсырья ГУП \"Экотехпром\"",
+    "type": [
+      "Glass",
+      "Plastic"
+    ],
+    "address": "г. Москва, Екатерининский сквер",
+    "coordinates": {
+      "latitude": 55.774091,
+      "longitude": 37.619989
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 499 238-49-34",
+    "email": "company@eco-pro.ru",
+    "website": "eco-pro.ru/раздельный-сбор-отходов/"
+  },
+  {
+    "name": "Контейнеры-сетки для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Покровка, д. 10-12",
+    "coordinates": {
+      "latitude": 55.758868,
+      "longitude": 37.644463
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "https://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Пункт приема металлолома \"Интерлом\"",
+    "type": [
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Никулинская, д. 18",
+    "coordinates": {
+      "latitude": 55.673733,
+      "longitude": 37.447540
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 215-28-00",
+    "email": "priem@metallolom-moscow.ru",
+    "website": "http://metallolom-moscow.ru/"
+  },
+  {
+    "name": "Контейнеры для вторсырья ГУП \"Экотехпром\"",
+    "type": [
+      "Glass",
+      "Plastic"
+    ],
+    "address": "Метро \"Кожуховская\"",
+    "coordinates": {
+      "latitude": 55.706373,
+      "longitude": 37.685340
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 499 238-49-34",
+    "email": "company@eco-pro.ru",
+    "website": "http://www.eco-pro.ru/perechen-adresov-raspolojeniya-konteynerov"
+  },
+  {
+    "name": "Точка приема батареек, фандомат для приема пластиковых бутылок в магазине \"ВкусВилл\"",
+    "type": [
+      "Plastic"
+    ],
+    "address": "г. Москва, ул. Большая Спасская, д. 8, стр. 1А",
+    "coordinates": {
+      "latitude": 55.775885,
+      "longitude": 37.643345
+    },
+    "schedule": "7:00-23:45",
+    "telephone": "",
+    "email": "",
+    "website": "https://vkusvill.ru/"
+  },
+  {
+    "name": "Контейнер для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, Котельническая наб., д. 1/15",
+    "coordinates": {
+      "latitude": 55.747110,
+      "longitude": 37.642698
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "http://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Фандомат по приему вторсырья в магазине \"Пятерочка\"",
+    "type": [
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Васильевская, д. 7",
+    "coordinates": {
+      "latitude": 55.771220,
+      "longitude": 37.586844
+    },
+    "schedule": "8:00-23:00",
+    "telephone": "+7 800 555-55-05",
+    "email": "Denis.Kuznetsov@x5.ru",
+    "website": "http://www.henkel.ru/press-and-media/press-releases-and-kits/2020-02-20-fandomat-1036034"
+  },
+  {
+    "name": "Фандомат по приему вторсырья \"Ecoplatform\"",
+    "type": [
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, Павелецкая пл., д. 1А",
+    "coordinates": {
+      "latitude": 55.729754,
+      "longitude": 37.639491
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 800 550-11-49",
+    "email": "info@ecoplatform.ru",
+    "website": "http://ecoplatform.ru/"
+  },
+  {
+    "name": "Контейнеры-сетки для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, Комсомольский просп., д. 47А",
+    "coordinates": {
+      "latitude": 55.718883,
+      "longitude": 37.573900
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "http://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Контейнеры-сетки для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, Беговая аллея, д. 3",
+    "coordinates": {
+      "latitude": 55.782922,
+      "longitude": 37.565219
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "http://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Пункт приема старой посуды в магазине \"Fissman\"",
+    "type": [
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Шереметьевская, д. 6, к. 1",
+    "coordinates": {
+      "latitude": 55.795403,
+      "longitude": 37.617033
+    },
+    "schedule": "10:00-22:00",
+    "telephone": "+7 800 555-25-61",
+    "email": "",
+    "website": "http://fissman.ru/news/o-magazine/vserossiyskaya-ekologicheskaya-programma-fissman/"
+  },
+  {
+    "name": "Пункт приема книг \"Re:Books\"",
+    "type": [
+      "Paper"
+    ],
+    "address": "г.Москва, ул. Годовикова, д. 6",
+    "coordinates": {
+      "latitude": 55.804630,
+      "longitude": 37.631892
+    },
+    "schedule": "10:00-18:00",
+    "telephone": "+7 952 271-74-66",
+    "email": "info@re-books.ru",
+    "website": "http://re-books.ru/gdie_sdat_knighi"
+  },
+  {
+    "name": "Контейнеры-сетки для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Нижегородская, д. 11А",
+    "coordinates": {
+      "latitude": 55.738971,
+      "longitude": 37.685521
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "http://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Контейнеры-сетки для вторсырья \"ЭкоЛайн\"",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, ул. Басманная Стар., д. 20, к. 3",
+    "coordinates": {
+      "latitude": 55.765807,
+      "longitude": 37.666270
+    },
+    "schedule": "Круглосуточно",
+    "telephone": "+7 495 663-65-60",
+    "email": "info@ec-line.ru",
+    "website": "http://ec-line.ru/contacts/"
+  },
+  {
+    "name": "Экоцентр \"Сборка\" на Чистых прудах",
+    "type": [
+      "Paper",
+      "Glass",
+      "Plastic",
+      "Metal"
+    ],
+    "address": "г. Москва, Потаповский пер., д. 5, стр. 2",
+    "coordinates": {
+      "latitude": 55.761619,
+      "longitude": 37.640659
+    },
+    "schedule": "14:00-20:00",
+    "telephone": "+7 499 490-42-58",
+    "email": "ecosborka@gmail.com",
+    "website": "http://t.me/ecosborka"
+  }
+]
