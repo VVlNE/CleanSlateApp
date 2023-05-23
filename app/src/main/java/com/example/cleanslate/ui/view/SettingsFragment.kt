@@ -1,14 +1,11 @@
 package com.example.cleanslate.ui.view
 
-import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.cleanslate.R
@@ -17,7 +14,6 @@ import com.example.cleanslate.data.model.Theme
 import com.example.cleanslate.databinding.FragmentSettingsBinding
 import com.example.cleanslate.ui.stateholder.SettingsViewModel
 import com.google.android.material.chip.Chip
-import java.util.*
 
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
@@ -79,7 +75,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setBackButton() {
-        binding.back.setOnClickListener{
+        binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_settings_to_navigation_main)
         }
     }

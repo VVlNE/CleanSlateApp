@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Theme.CleanSlate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
@@ -8,8 +9,9 @@
         <item name="colorSecondary">@color/primary_background_dark</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/secondary_text_dark</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_background_dark</item>
+        <!-- Status bar color. -->\
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_background_dark
+        </item>
 
         <item name="android:textColor">@color/primary_text_dark</item>
     </style>

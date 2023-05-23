@@ -1,23 +1,16 @@
 package com.example.cleanslate.ui.stateholder
 
 import android.app.Application
-import android.graphics.PointF
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.cleanslate.R
 import com.example.cleanslate.data.datasource.CleanSlateSharedPreferences
 import com.example.cleanslate.data.model.GarbageCollectionPoint
 import com.example.cleanslate.data.model.GarbageType
-import com.example.cleanslate.data.model.Language
+import com.example.cleanslate.data.model.toGarbageType
 import com.example.cleanslate.domain.GarbageTypeDeserializer
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
-import com.yandex.mapkit.mapview.MapView
-import com.yandex.mapkit.user_location.UserLocationLayer
 import java.io.IOException
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -31,8 +24,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     var cameraAzimuth = MutableLiveData<Float>()
     var cameraTilt = MutableLiveData<Float>()
 
+    private var wasteCategories = MutableLiveData<Set<String>>()
+    private var allSelectedCategoriesFlag = MutableLiveData<Boolean>()
+
     private val filename = "garbage_collection_points.json"
-    val garbageCollectionPoints: List<GarbageCollectionPoint>
+    private val garbageCollectionPoints: List<GarbageCollectionPoint>
 
     init {
         location.value = preferences.readLocation()
@@ -41,6 +37,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         cameraZoom.value = preferences.readCameraZoom()
         cameraAzimuth.value = preferences.readCameraAzimuth()
         cameraTilt.value = preferences.readCameraTilt()
+
+        wasteCategories.value = preferences.readWasteCategories()
+        allSelectedCategoriesFlag.value = preferences.readAllSelectedCategoriesFlag()
 
         val jsonFileString = getJsonDataFromAsset()
         val myList = object : TypeToken<List<GarbageCollectionPoint>>() {}.type
@@ -69,5 +68,26 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         preferences.saveCameraZoom(zoom)
         preferences.saveCameraAzimuth(azimuth)
         preferences.saveCameraTilt(tilt)
+    }
+
+    fun getGarbageCollectionPoints(): List<GarbageCollectionPoint> {
+        val list = mutableListOf<GarbageCollectionPoint>()
+        for (point in garbageCollectionPoints) {
+            if (allSelectedCategoriesFlag.value!!) {
+                var flag = true
+                for (category in wasteCategories.value!!)
+                    if (!point.type.contains(category.toGarbageType()))
+                        flag = false
+                if (flag) list.add(point)
+            } else {
+                var flag = false
+                for (category in wasteCategories.value!!)
+                    if (point.type.contains(category.toGarbageType()))
+                        flag = true
+                if (flag) list.add(point)
+            }
+        }
+
+        return list
     }
 }
