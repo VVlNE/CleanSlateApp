@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:paddingStart="20dp"
-                android:textSize="24dp"/>
+                android:textSize="24dp" />
 
             <ImageButton
                 android:id="@+id/settings_button"

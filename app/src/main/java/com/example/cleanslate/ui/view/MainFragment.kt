@@ -23,6 +23,7 @@ import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
 import com.yandex.mapkit.map.*
 import com.yandex.mapkit.user_location.UserLocationLayer
+import com.yandex.runtime.ui_view.ViewProvider
 
 
 class MainFragment : Fragment() {
@@ -78,7 +79,6 @@ class MainFragment : Fragment() {
         if (checkPermissions()) viewModel.changeLocation(
             userLocationLayer.cameraPosition()?.let { it.target })
 
-        // TODO("Не сохраняется при смене активностей")
         changeCameraPosition()
 
         binding.mapView.onStop()
@@ -154,10 +154,15 @@ class MainFragment : Fragment() {
 
     // TODO("Добавить изображение маркера")
     private fun addMapObjects() {
-        for ((index, garbageCollectionPoint) in viewModel.garbageCollectionPoints.withIndex()) {
+        val image = View(requireContext()).apply {
+            background = requireContext().getDrawable(R.drawable.ic_baseline_place)
+        }
+
+        for ((index, garbageCollectionPoint) in viewModel.getGarbageCollectionPoints()
+            .withIndex()) {
             val mapObject = mapObjectCollection.addPlacemark(
-                garbageCollectionPoint.coordinates
-                //ImageProvider.fromResource(context, R.drawable.ic_baseline_garbage_collection_point)
+                garbageCollectionPoint.coordinates,
+                ViewProvider(image)
             )
             mapObject.userData = garbageCollectionPoint
             mapObjectList.add(mapObject)
@@ -191,6 +196,10 @@ class MainFragment : Fragment() {
         bundle.putString("telephone", garbageCollectionPoint.telephone)
         bundle.putString("email", garbageCollectionPoint.email)
         bundle.putString("website", garbageCollectionPoint.website)
+        bundle.putString(
+            "coordinates",
+            "geo:0,0?q=${garbageCollectionPoint.coordinates.latitude}, ${garbageCollectionPoint.coordinates.longitude}"
+        )
 
         bundle.putDouble(
             "distance",

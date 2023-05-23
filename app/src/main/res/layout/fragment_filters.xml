@@ -16,7 +16,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/back"
+                android:id="@+id/back_button"
                 android:layout_width="?actionBarSize"
                 android:layout_height="match_parent"
                 android:background="@color/transparent_background"

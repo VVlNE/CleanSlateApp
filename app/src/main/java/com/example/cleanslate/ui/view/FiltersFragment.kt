@@ -3,7 +3,6 @@ package com.example.cleanslate.ui.view
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.ActivityNotFoundException
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -12,7 +11,6 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -27,8 +25,6 @@ import com.example.cleanslate.databinding.FragmentFiltersBinding
 import com.example.cleanslate.data.network.FileDataPart
 import com.example.cleanslate.data.network.VolleyFileUploadRequest
 import com.example.cleanslate.ui.stateholder.FiltersViewModel
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
 import java.io.*
 import java.util.*
 
@@ -58,14 +54,15 @@ class FiltersFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[FiltersViewModel::class.java]
-
         binding.title.text = resources.getString(R.string.filters)
 
         if (!checkPermissions()) requestPermissions()
 
-        setBackButton()
+        setFilters()
 
+        setBackButton()
         setAutoDeterminationButton()
+        setApplyButton()
     }
 
     override fun onStop() {
@@ -76,21 +73,8 @@ class FiltersFragment : Fragment() {
         super.onStart()
     }
 
-    private fun ChipGroup.addChip(context: Context, label: String) {
-        Chip(context).apply {
-            layoutParams = FrameLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            text = label
-            isClickable = true
-            isCheckable = true
-            addView(this)
-        }
-    }
-
     private fun setBackButton() {
-        binding.back.setOnClickListener {
+        binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_filters_to_navigation_main)
         }
     }
@@ -98,6 +82,21 @@ class FiltersFragment : Fragment() {
     private fun setAutoDeterminationButton() {
         binding.autoDeterminationButton.setOnClickListener {
             openCamera()
+        }
+    }
+
+    private fun setApplyButton() {
+        binding.applyButton.setOnClickListener {
+            viewModel.changeAllSelectedCategoriesFlag(binding.allSelectedCategoriesButton.isChecked)
+
+            val wasteCategories = mutableSetOf<String>()
+            if (binding.paper.isChecked) wasteCategories.add(GarbageType.PAPER.toString())
+            if (binding.glass.isChecked) wasteCategories.add(GarbageType.GLASS.toString())
+            if (binding.plastic.isChecked) wasteCategories.add(GarbageType.PLASTIC.toString())
+            if (binding.metal.isChecked) wasteCategories.add(GarbageType.METAL.toString())
+            viewModel.changeWasteCategories(wasteCategories)
+
+            findNavController().navigate(R.id.action_navigation_filters_to_navigation_main)
         }
     }
 
@@ -174,4 +173,16 @@ class FiltersFragment : Fragment() {
         requireContext(),
         Manifest.permission.CAMERA
     ) == PackageManager.PERMISSION_GRANTED
+
+    private fun setFilters() {
+        for (category in viewModel.wasteCategories.value!!)
+            when (category.toGarbageType()) {
+                GarbageType.PLASTIC -> binding.plastic.isChecked = true
+                GarbageType.PAPER -> binding.paper.isChecked = true
+                GarbageType.METAL -> binding.metal.isChecked = true
+                GarbageType.GLASS -> binding.glass.isChecked = true
+            }
+
+        binding.allSelectedCategoriesButton.isChecked = viewModel.allSelectedCategoriesFlag.value!!
+    }
 }

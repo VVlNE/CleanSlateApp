@@ -2,6 +2,7 @@ package com.example.cleanslate.data.datasource
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.cleanslate.data.model.GarbageType
 import com.example.cleanslate.data.model.Language
 import com.example.cleanslate.data.model.Theme
 import com.google.gson.Gson
@@ -20,6 +21,8 @@ class CleanSlateSharedPreferences(context: Context) {
     private val cameraZoomKey = "CameraZoom"
     private val cameraAzimuthKey = "CameraAzimuth"
     private val cameraTiltKey = "CameraTilt"
+    private val wasteCategoriesKey = "WasteCategories"
+    private val allSelectedCategoriesFlagKey = "AllSelectedCategoriesFlag"
 
     fun saveLanguage(language: Language) {
         val editor: SharedPreferences.Editor = preferences.edit()
@@ -110,5 +113,35 @@ class CleanSlateSharedPreferences(context: Context) {
             saveCameraTilt(0.0f)
 
         return preferences.getFloat(cameraTiltKey, 0.0f)
+    }
+
+    fun saveWasteCategories(wasteCategories: Set<String>) {
+        val editor: SharedPreferences.Editor = preferences.edit()
+        editor.putStringSet(wasteCategoriesKey, wasteCategories)
+        editor.apply()
+    }
+
+    fun readWasteCategories(): Set<String> {
+        if (!preferences.contains(wasteCategoriesKey)) {
+            val set = mutableSetOf<String>()
+            for (value in GarbageType.values())
+                set.add(value.toString())
+            saveWasteCategories(set)
+        }
+
+        return preferences.getStringSet(wasteCategoriesKey, setOf<String>())!!
+    }
+
+    fun saveAllSelectedCategoriesFlag(allSelectedCategoriesFlag: Boolean) {
+        val editor: SharedPreferences.Editor = preferences.edit()
+        editor.putBoolean(allSelectedCategoriesFlagKey, allSelectedCategoriesFlag)
+        editor.apply()
+    }
+
+    fun readAllSelectedCategoriesFlag(): Boolean {
+        if (!preferences.contains(allSelectedCategoriesFlagKey))
+            saveAllSelectedCategoriesFlag(false)
+
+        return preferences.getBoolean(allSelectedCategoriesFlagKey, false)
     }
 }

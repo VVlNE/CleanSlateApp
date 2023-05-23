@@ -1,6 +1,8 @@
 package com.example.cleanslate.ui.view
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -89,13 +91,18 @@ class PointInformationFragment : Fragment() {
     }
 
     private fun setBackButton() {
-        binding.back.setOnClickListener {
+        binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_point_information_to_navigation_main)
         }
     }
 
-    // TODO('Добавить переход на стороннюю карту')
     private fun setThirdPartyMapButton() {
-        binding.thirdPartyMapButton.setOnClickListener { }
+        binding.thirdPartyMapButton.setOnClickListener {
+            val uri = Uri.parse(arguments?.getString("coordinates"))
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = uri
+            }
+            startActivity(intent)
+        }
     }
 }
