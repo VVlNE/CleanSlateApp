@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -16,6 +17,7 @@ import com.example.cleanslate.databinding.FragmentPointInformationBinding
 import com.example.cleanslate.ui.stateholder.PointInformationViewModel
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import kotlinx.android.synthetic.main.fragment_settings.view.*
 
 class PointInformationFragment : Fragment() {
     private var _binding: FragmentPointInformationBinding? = null
@@ -41,6 +43,8 @@ class PointInformationFragment : Fragment() {
 
         binding.title.text = arguments?.getString("name")
 
+        showTitleName()
+
         for (type in arguments?.getStringArray("type")!!)
             binding.wasteCategories.addChip(requireContext(), type)
 
@@ -48,17 +52,17 @@ class PointInformationFragment : Fragment() {
         binding.schedule.text = arguments?.getString("schedule")
 
         binding.telephone.visibility =
-            if (arguments?.getString("telephone")!!.isEmpty()) View.GONE
+            if (arguments?.getString("telephone") == null) View.GONE
             else View.VISIBLE
         binding.telephone.text = arguments?.getString("telephone")
 
         binding.email.visibility =
-            if (arguments?.getString("email")!!.isEmpty()) View.GONE
+            if (arguments?.getString("email") == null) View.GONE
             else View.VISIBLE
         binding.email.text = arguments?.getString("email")
 
         binding.website.visibility =
-            if (arguments?.getString("website")!!.isEmpty()) View.GONE
+            if (arguments?.getString("website") == null) View.GONE
             else View.VISIBLE
         binding.website.text = arguments?.getString("website")
 
@@ -78,7 +82,7 @@ class PointInformationFragment : Fragment() {
     }
 
     private fun ChipGroup.addChip(context: Context, label: String) {
-        Chip(context).apply {
+        Chip(context, null, R.style.ChipStyle).apply {
             layoutParams = FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
@@ -103,6 +107,12 @@ class PointInformationFragment : Fragment() {
                 data = uri
             }
             startActivity(intent)
+        }
+    }
+
+    private fun showTitleName() {
+        binding.title.setOnClickListener {
+            Toast.makeText(requireContext(), binding.title.text.toString(), Toast.LENGTH_LONG).show()
         }
     }
 }

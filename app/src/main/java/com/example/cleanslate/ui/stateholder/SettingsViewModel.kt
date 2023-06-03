@@ -1,6 +1,9 @@
 package com.example.cleanslate.ui.stateholder
 
 import android.app.Application
+import android.os.Build
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.cleanslate.data.datasource.CleanSlateSharedPreferences
@@ -20,21 +23,20 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     }
 
     // TODO("Настроить смену языков")
+    @RequiresApi(Build.VERSION_CODES.N)
     fun changeLanguage(language: Language) {
         this.language.value = language
         preferences.saveLanguage(language)
     }
 
-    // TODO("Не работает с картами")
     fun changeTheme(theme: Theme) {
         this.theme.value = theme
         preferences.saveTheme(theme)
 
-        /*
         when (theme) {
-            Theme.LIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            Theme.DAY -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             Theme.NIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             Theme.SYSTEM -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-        }*/
+        }
     }
 }

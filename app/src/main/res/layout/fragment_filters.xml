@@ -13,23 +13,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="10sp"
+            android:paddingEnd="10sp">
 
             <ImageButton
                 android:id="@+id/back_button"
                 android:layout_width="?actionBarSize"
                 android:layout_height="match_parent"
-                android:background="@color/transparent_background"
-                android:src="@drawable/ic_baseline_back" />
+                android:src="@drawable/ic_baseline_arrow_back"
+                android:stateListAnimator="@null"
+                android:theme="@style/ToolbarButton" />
 
             <TextView
                 android:id="@+id/title"
-                style="@style/ToolbarTextStyle"
-                android:layout_width="0dp"
+                style="@style/ToolbarStyle"
+                android:layout_width="0sp"
                 android:layout_height="?actionBarSize"
                 android:layout_weight="1"
-                android:minHeight="?actionBarSize"
-                android:paddingEnd="20dp" />
+                android:minHeight="?actionBarSize" />
 
         </LinearLayout>
 
@@ -43,14 +45,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20sp">
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
-                    android:text="@string/waste_categories"
-                    android:textSize="18dp" />
+                    android:paddingStart="12sp"
+                    android:text="@string/waste_categories" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/waste_categories"
@@ -61,7 +63,7 @@
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/paper"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checkable="true"
@@ -70,7 +72,7 @@
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/glass"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checkable="true"
@@ -79,7 +81,7 @@
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/plastic"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checkable="true"
@@ -88,7 +90,7 @@
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/metal"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checkable="true"
@@ -99,24 +101,24 @@
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <Switch
                     android:id="@+id/all_selected_categories_button"
                     style="@style/SwitchStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
+                    android:paddingStart="12sp"
                     android:text="@string/all_selected_categories"
                     android:theme="@style/SwitchStyle" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <Button
                     android:id="@+id/auto_determination_button"

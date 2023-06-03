@@ -9,27 +9,28 @@
     <string name="language_setting">Язык</string>
     <string name="theme_setting">Тема</string>
     <string name="system_lang_setting">Системный</string>
-    <string name="light_theme_setting">Светлая</string>
+    <string name="day_theme_setting">Светлая</string>
     <string name="night_theme_setting">Темная</string>
     <string name="system_theme_setting">Системная</string>
 
-    <string name="location_not_available_warning">Местоположение недоступно</string>
-    <string name="garbage_collection_points_load_warning">Невозможно загрузить точки сбора мусора</string>
-    <string name="permissions_not_granted">Разрешения для обработки запроса не предоставлены</string>
+    <string name="all_selected_categories">Пункты, принимающие все выбранное</string>
+    <string name="auto_determination">Автоопределение</string>
+    <string name="apply_filters">Применить</string>
 
     <string name="waste_categories">Категории отходов</string>
     <string name="address">Адрес</string>
     <string name="schedule">График работы</string>
     <string name="contacts">Контакты</string>
     <string name="kilometers">км</string>
+    <string name="open_in_maps">Перейти на карту</string>
 
     <string name="paper">Бумага</string>
     <string name="glass">Стекло</string>
     <string name="plastic">Пластик</string>
     <string name="metal">Металл</string>
 
-    <string name="open_in_maps">Перейти на карту</string>
-    <string name="all_selected_categories">Пункты, принимающие все выбранное</string>
-    <string name="auto_determination">Автоопределение</string>
-    <string name="apply_filters">Применить</string>
+    <string name="camera_is_not_available">Камера недоступна. Требуется разрешение в настройках!</string>
+    <string name="server_is_not_available">Сервер недоступен! Попробуйте позже.</string>
+    <string name="location_is_not_available">Местоположение недоступно. Требуется разрешение в настройках!</string>
+    <string name="no_camera">На устройстве нет камеры!</string>
 </resources>

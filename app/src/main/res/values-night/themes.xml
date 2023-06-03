@@ -1,44 +1,58 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.CleanSlate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/green_dark</item>
-        <item name="colorOnPrimary">@color/secondary_text_dark</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/primary_background_dark</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/secondary_text_dark</item>
-        <!-- Status bar color. -->\
-        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_background_dark
-        </item>
-
-        <item name="android:textColor">@color/primary_text_dark</item>
+        <item name="colorOnPrimary">@color/foreground_alpha</item>
+        <item name="colorSecondary">@color/background_night</item>
+        <item name="colorOnSecondary">@color/foreground_night</item>
+        <item name="android:statusBarColor">@color/background_night</item>
+        <item name="android:textColor">@color/foreground_night</item>
+        <item name="android:textSize">@dimen/plain</item>
     </style>
 
-    <style name="SecondaryTextStyle" parent="Theme.CleanSlate">
-        <item name="android:textColor">@color/secondary_text_dark</item>
-        <item name="android:textSize">16dp</item>
+    <style name="TextViewStyle" parent="Theme.CleanSlate">
+        <item name="android:textColor">@color/foreground_alpha</item>
+        <item name="android:textSize">@dimen/subtitle</item>
     </style>
 
-    <style name="ToolbarTextStyle" parent="Theme.CleanSlate">
-        <item name="android:textColor">@color/secondary_text_dark</item>
-        <item name="android:textSize">20dp</item>
+    <style name="ToolbarStyle" parent="Theme.CleanSlate">
+        <item name="android:textColor">@color/foreground_night</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:gravity">start|center</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
     </style>
-
     <style name="ButtonStyle" parent="Theme.CleanSlate">
-        <item name="colorPrimary">@color/secondary_background_dark</item>
-        <item name="android:textColor">@color/primary_text_dark</item>
+        <item name="colorPrimary">@color/button_color</item>
+        <item name="android:textColor">@color/foreground_night</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">@dimen/subtitle</item>
+        <item name="android:stateListAnimator">"@null"</item>
+    </style>
+
+    <style name="ToolbarButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/background_night</item>
+        <item name="colorControlHighlight">@color/button_color</item>
+        <item name="android:shape">oval</item>
     </style>
 
     <style name="SwitchStyle" parent="Theme.CleanSlate">
-        <item name="android:textColor">@color/primary_text_dark</item>
-        <item name="android:textSize">16dp</item>
-        <item name="colorControlActivated">@color/green_dark</item>
+        <item name="android:textColor">@color/foreground_alpha</item>
+        <item name="android:textSize">@dimen/subtitle</item>
+
+        <item name="colorControlActivated">@color/highlighter</item>
+        <item name="colorSwitchThumbNormal">@color/foreground_night</item>
+        <item name="android:background">"@null"</item>
+        <item name="android:colorForeground">@color/foreground_alpha</item>
+    </style>
+
+    <style name="ChipStyle" parent="Theme.CleanSlate">
+        <item name="chipIconVisible">false</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="rippleColor">@color/chip_ripple_color</item>
     </style>
 </resources>

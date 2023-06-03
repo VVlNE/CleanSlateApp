@@ -1,0 +1,313 @@
+[
+   {
+     "name": "Container for receiving a jar of \"Evalar\" products in \"Evalar\" pharmacy",
+     "type": [
+       "Plastic"
+     ],
+     "address": "Moscow, Tverskaya st., 4",
+     "coordinates": {
+       "latitude": 55.758156,
+       "longitude": 37.613571
+     },
+     "schedule": "24/7",
+     "telephone": "+7 495 692-39-11",
+     "email": "commerce.msk@evalar.com",
+     "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+   },
+   {
+     "name": "Container for receiving a jar of \"Evalar\" products in \"Evalar\" pharmacy",
+     "type": [
+       "Plastic"
+     ],
+     "address": "Moscow, Myasnitskaya st., 24/7, building 2",
+     "coordinates": {
+       "latitude": 55.763297,
+       "longitude": 37.635654
+     },
+     "schedule": "24/7",
+     "telephone": "+7 495 623-33-40",
+     "email": "commerce.msk@evalar.com",
+     "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+   },
+   {
+     "name": "Container for receiving a jar of \"Evalar\" products in \"Evalar\" pharmacy",
+     "type": [
+       "Plastic"
+     ],
+     "address": "Moscow, Kaluzhskaya sq., 1, k. 1",
+     "coordinates": {
+       "latitude": 55.728326,
+       "longitude": 37.611781
+     },
+     "schedule": "24/7",
+     "telephone": "+7 499 230-18-71",
+     "email": "commerce.msk@evalar.com",
+     "website": "http://www.evalar.ru/news/item/evalar-i-sobirator-zapustili-aktsiyu-po-sboru-plastikovykh-banochek/"
+   },
+   {
+     "name": "Point of collection of caps, batteries, plastic cards, books in the shop \"VkusVill\"",
+     "type": [
+       "paper",
+       "Plastic"
+     ],
+     "address": "Moscow, per. Sivtsev Vrazhek, 20",
+     "coordinates": {
+       "latitude": 55.747725,
+       "longitude": 37.593718
+     },
+     "schedule": "9:00-22:00",
+     "telephone": "+7 925 265-94-50",
+     "email": "info@izbenka.msk.ru",
+     "website": "https://vkusvill.ru/"
+   },
+   {
+     "name": "Containers for recycling SUE \"Ecotechprom\"",
+     "type": [
+       "Glass",
+       "Plastic"
+     ],
+     "address": "Moscow, Catherine Square",
+     "coordinates": {
+       "latitude": 55.774091,
+       "longitude": 37.619989
+     },
+     "schedule": "24/7",
+     "telephone": "+7 499 238-49-34",
+     "email": "company@eco-pro.ru",
+     "website": "eco-pro.ru/separate-waste-collection/"
+   },
+   {
+     "name": "Mesh containers for recycling \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Pokrovka st., 10-12",
+     "coordinates": {
+       "latitude": 55.758868,
+       "longitude": 37.644463
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "https://ec-line.ru/contacts/"
+   },
+   {
+     "name": "Scrap metal collection point \"Interlom\"",
+     "type": [
+       "Metal"
+     ],
+"address": "Moscow, Nikulinskaya st., 18",
+     "coordinates": {
+       "latitude": 55.673733,
+       "longitude": 37.447540
+     },
+     "schedule": "24/7",
+     "telephone": "+7 495 215-28-00",
+     "email": "priem@metallolom-moscow.ru",
+     "website": "http://metallolom-moscow.ru/"
+   },
+   {
+     "name": "Containers for recycling SUE \"Ecotechprom\"",
+     "type": [
+       "Glass",
+       "Plastic"
+     ],
+     "address": "Metro \"Kozhukhovskaya\"",
+     "coordinates": {
+       "latitude": 55.706373,
+       "longitude": 37.685340
+     },
+     "schedule": "24/7",
+     "telephone": "+7 499 238-49-34",
+     "email": "company@eco-pro.ru",
+     "website": "http://www.eco-pro.ru/perechen-adresov-raspolojeniya-konteynerov"
+   },
+   {
+     "name": "Battery collection point, vandomat for plastic bottles in the store \"VkusVill\"",
+     "type": [
+       "Plastic"
+     ],
+     "address": "Moscow, Bolshaya Spasskaya st., 8, building 1A",
+     "coordinates": {
+       "latitude": 55.775885,
+       "longitude": 37.643345
+     },
+     "schedule": "7:00-23:45",
+     "telephone": "",
+     "email": "",
+     "website": "https://vkusvill.ru/"
+   },
+   {
+     "name": "Recycling container \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Kotelnicheskaya emb., 1/15",
+     "coordinates": {
+       "latitude": 55.747110,
+       "longitude": 37.642698
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "http://ec-line.ru/contacts/"
+   },
+   {
+     "name": "Vandomat for recycling in the store \"Pyaterochka\"",
+     "type": [
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Vasilievskaya st., 7",
+     "coordinates": {
+       "latitude": 55.771220,
+       "longitude": 37.586844
+     },
+     "schedule": "8:00-23:00",
+     "telephone": "+7 800 555-55-05",
+     "email": "Denis.Kuznetsov@x5.ru",
+     "website": "http://www.henkel.ru/press-and-media/press-releases-and-kits/2020-02-20-fandomat-1036034"
+   },
+   {
+     "name": "Vendomat for recycling \"Ecoplatform\"",
+     "type": [
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Paveletskaya sq., 1A",
+     "coordinates": {
+       "latitude": 55.729754,
+       "longitude": 37.639491
+     },
+     "schedule": "24/7",
+     "telephone": "+7 800 550-11-49",
+     "email": "info@ecoplatform.ru",
+     "website": "http://ecoplatform.ru/"
+   },
+   {
+     "name": "Mesh containers for recycling \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Komsomolsky prospekt, 47A",
+     "coordinates": {
+       "latitude": 55.718883,
+       "longitude": 37.573900
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "http://ec-line.ru/contacts/"
+   },
+   {
+"name": "Mesh containers for recycling \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Begovaya alley, 3",
+     "coordinates": {
+       "latitude": 55.782922,
+       "longitude": 37.565219
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "http://ec-line.ru/contacts/"
+   },
+   {
+     "name": "The point of collection of old dishes in the store \"Fissman\"",
+     "type": [
+       "Metal"
+     ],
+     "address": "Moscow, Sheremetevskaya st., 6, building 1",
+     "coordinates": {
+       "latitude": 55.795403,
+       "longitude": 37.617033
+     },
+     "schedule": "10:00-22:00",
+     "telephone": "+7 800 555-25-61",
+     "email": "",
+     "website": "http://fissman.ru/news/o-magazine/vserossiyskaya-ekologicheskaya-programma-fissman/"
+   },
+   {
+     "name": "Re:Books Re:Books\"",
+     "type": [
+       "paper"
+     ],
+     "address": "Moscow, Godovikova st., 6",
+     "coordinates": {
+       "latitude": 55.804630,
+       "longitude": 37.631892
+     },
+     "schedule": "10:00-18:00",
+     "telephone": "+7 952 271-74-66",
+     "email": "info@re-books.ru",
+     "website": "http://re-books.ru/gdie_sdat_knighi"
+   },
+   {
+     "name": "Mesh containers for recycling \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Nizhegorodskaya st., 11A",
+     "coordinates": {
+       "latitude": 55.738971,
+       "longitude": 37.685521
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "http://ec-line.ru/contacts/"
+   },
+   {
+     "name": "Mesh containers for recycling \"EcoLine\"",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Basmannaya Star st., 20, building 3",
+     "coordinates": {
+       "latitude": 55.765807,
+       "longitude": 37.666270
+     },
+     "schedule": "24/7",
+     "phone": "+7 495 663-65-60",
+     "email": "info@ec-line.ru",
+     "website": "http://ec-line.ru/contacts/"
+   },
+   {
+     "name": "Ecocenter \"Assembly\" at Chistye Prudy",
+     "type": [
+       "paper",
+       "Glass",
+       "Plastic",
+       "Metal"
+     ],
+     "address": "Moscow, Potapovsky lane, 5, building 2",
+     "coordinates": {
+       "latitude": 55.761619,
+       "longitude": 37.640659
+     },
+     "schedule": "14:00-20:00",
+     "telephone": "+7 499 490-42-58",
+     "email": "ecosborka@gmail.com",
+     "website": "http://t.me/ecosborka"
+   }
+]

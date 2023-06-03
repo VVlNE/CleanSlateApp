@@ -1,12 +1,11 @@
 package com.example.cleanslate.ui.stateholder
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.cleanslate.data.datasource.CleanSlateSharedPreferences
-import com.example.cleanslate.data.model.GarbageCollectionPoint
-import com.example.cleanslate.data.model.GarbageType
-import com.example.cleanslate.data.model.toGarbageType
+import com.example.cleanslate.data.model.*
 import com.example.cleanslate.domain.GarbageTypeDeserializer
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -27,10 +26,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var wasteCategories = MutableLiveData<Set<String>>()
     private var allSelectedCategoriesFlag = MutableLiveData<Boolean>()
 
-    private val filename = "garbage_collection_points.json"
+    var language = MutableLiveData<Language>()
+    var theme = MutableLiveData<Theme>()
+
+    private var filename = "garbage_collection_points"
     private val garbageCollectionPoints: List<GarbageCollectionPoint>
 
     init {
+        filename += when (context.resources.configuration.locale.language.toString()) {
+            "ru" -> "-ru.json"
+            else -> "-en.json"
+        }
         location.value = preferences.readLocation()
 
         cameraLocation.value = preferences.readCameraLocation()
@@ -40,6 +46,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         wasteCategories.value = preferences.readWasteCategories()
         allSelectedCategoriesFlag.value = preferences.readAllSelectedCategoriesFlag()
+
+        language.value = preferences.readLanguage()
+        theme.value = preferences.readTheme()
+
+        when (theme.value) {
+            Theme.DAY -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            Theme.NIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            Theme.SYSTEM -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
 
         val jsonFileString = getJsonDataFromAsset()
         val myList = object : TypeToken<List<GarbageCollectionPoint>>() {}.type
