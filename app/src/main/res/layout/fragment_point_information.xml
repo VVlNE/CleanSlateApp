@@ -13,23 +13,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="10sp"
+            android:paddingEnd="20sp">
 
             <ImageButton
                 android:id="@+id/back_button"
                 android:layout_width="?actionBarSize"
                 android:layout_height="match_parent"
-                android:background="@color/transparent_background"
-                android:src="@drawable/ic_baseline_back" />
+                android:stateListAnimator="@null"
+                android:theme="@style/ToolbarButton"
+                android:src="@drawable/ic_baseline_arrow_back"/>
 
             <TextView
                 android:id="@+id/title"
-                style="@style/ToolbarTextStyle"
-                android:layout_width="0dp"
+                style="@style/ToolbarStyle"
+                android:layout_width="0sp"
                 android:layout_height="?actionBarSize"
                 android:layout_weight="1"
-                android:minHeight="?actionBarSize"
-                android:paddingEnd="20dp" />
+                android:minHeight="?actionBarSize"/>
 
         </LinearLayout>
 
@@ -43,14 +45,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20sp">
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="12dp"
-                    android:text="@string/waste_categories"
-                    android:textSize="18dp" />
+                    android:paddingLeft="12sp"
+                    android:text="@string/waste_categories" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/waste_categories"
@@ -60,124 +62,121 @@
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
-                    android:text="@string/address"
-                    android:textSize="18dp" />
+                    android:paddingStart="12sp"
+                    android:text="@string/address" />
 
                 <TextView
                     android:id="@+id/address"
-                    style="@style/SecondaryTextStyle"
+                    style="@style/ChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="8sp"
                     android:background="@drawable/secondary_background"
-                    android:paddingStart="12dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="6dp"
-                    android:textSize="16dp" />
-
-                <com.google.android.material.divider.MaterialDivider
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:clickable="false"
+                    android:paddingStart="12sp"
+                    android:paddingTop="4sp"
+                    android:paddingEnd="12sp"
+                    android:paddingBottom="6sp" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
-                    android:text="@string/schedule"
-                    android:textSize="18dp" />
+                    android:paddingStart="12sp"
+                    android:text="@string/schedule" />
 
                 <TextView
                     android:id="@+id/schedule"
-                    style="@style/SecondaryTextStyle"
+                    style="@style/ChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="8sp"
                     android:background="@drawable/secondary_background"
-                    android:paddingStart="12dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="6dp"
-                    android:textSize="16dp" />
+                    android:clickable="false"
+                    android:paddingStart="12sp"
+                    android:paddingTop="4sp"
+                    android:paddingEnd="12sp"
+                    android:paddingBottom="6sp" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
+                    android:paddingStart="12sp"
                     android:text="@string/contacts"
-                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/telephone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingStart="12dp"
-                    android:paddingTop="2dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="2dp"
-                    android:textSize="16dp" />
+                    android:layout_marginTop="8sp"
+                    android:paddingStart="12sp"
+                    android:paddingTop="2sp"
+                    android:paddingEnd="12sp"
+                    android:paddingBottom="2sp"
+                    android:textSize="@dimen/plain" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
-                    android:paddingTop="2dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="2dp"
-                    android:textSize="16dp" />
+                    android:paddingStart="12sp"
+                    android:paddingTop="2sp"
+                    android:paddingEnd="12sp"
+                    android:paddingBottom="2sp"
+                    android:textSize="@dimen/plain" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/website"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="12dp"
-                    android:paddingTop="2dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="16dp" />
+                    android:layout_marginBottom="8sp"
+                    android:paddingStart="12sp"
+                    android:paddingTop="2sp"
+                    android:paddingEnd="12sp"
+                    android:paddingBottom="4sp"
+                    android:textSize="@dimen/plain" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/distance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
+                    android:paddingStart="12sp"
                     android:text="12км"
-                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="0sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="6sp" />
 
                 <Button
                     android:id="@+id/third_party_map_button"

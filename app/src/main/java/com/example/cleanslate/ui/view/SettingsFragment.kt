@@ -1,11 +1,14 @@
 package com.example.cleanslate.ui.view
 
+import android.os.Build
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.cleanslate.R
@@ -33,6 +36,7 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
@@ -49,7 +53,7 @@ class SettingsFragment : Fragment() {
 
         viewModel.theme.observe(viewLifecycleOwner, Observer {
             when (it) {
-                Theme.LIGHT -> binding.themeSetting.check(binding.lightTheme.id)
+                Theme.DAY -> binding.themeSetting.check(binding.dayTheme.id)
                 Theme.NIGHT -> binding.themeSetting.check(binding.nightTheme.id)
                 Theme.SYSTEM -> binding.themeSetting.check(binding.systemTheme.id)
             }
@@ -65,7 +69,7 @@ class SettingsFragment : Fragment() {
 
         binding.themeSetting.setOnCheckedChangeListener { group, checkedId ->
             when (group.findViewById<Chip?>(checkedId)) {
-                binding.lightTheme -> viewModel.changeTheme(Theme.LIGHT)
+                binding.dayTheme -> viewModel.changeTheme(Theme.DAY)
                 binding.nightTheme -> viewModel.changeTheme(Theme.NIGHT)
                 binding.systemTheme -> viewModel.changeTheme(Theme.SYSTEM)
             }

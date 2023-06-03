@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -36,7 +37,7 @@ class FiltersFragment : Fragment() {
     val REQUEST_IMAGE = 1
 
     //TODO("Нужно установить правильный адрес сервера")
-    private val URL = "http://192.168.0.12:5000" + "/predictClass"
+    private val URL = "http://192.168.0.16:5000" + "/predictClass"
 
     companion object {
         fun newInstance() = FiltersFragment()
@@ -117,7 +118,11 @@ class FiltersFragment : Fragment() {
                 }
             },
             Response.ErrorListener {
-                // TODO("Дописать error it.toString()")
+                Toast.makeText(
+                    requireContext(),
+                    R.string.server_is_not_available,
+                    Toast.LENGTH_LONG
+                ).show()
             }
         ) {
             override fun getByteData(): MutableMap<String, FileDataPart> {
@@ -141,8 +146,17 @@ class FiltersFragment : Fragment() {
         try {
             if (checkPermissions())
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE)
+            else Toast.makeText(
+                requireContext(),
+                R.string.camera_is_not_available,
+                Toast.LENGTH_LONG
+            ).show()
         } catch (e: ActivityNotFoundException) {
-            // TODO("Дописать ошибку")
+            Toast.makeText(
+                requireContext(),
+                R.string.no_camera,
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 

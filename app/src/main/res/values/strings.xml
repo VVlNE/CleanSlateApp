@@ -11,27 +11,28 @@
     <string name="en_lang_setting" translatable="false">English</string>
     <string name="ru_lang_setting" translatable="false">Русский</string>
     <string name="system_lang_setting">System</string>
-    <string name="light_theme_setting">Light</string>
+    <string name="day_theme_setting">Day</string>
     <string name="night_theme_setting">Night</string>
     <string name="system_theme_setting">System</string>
 
-    <string name="location_not_available_warning">Location not available</string>
-    <string name="garbage_collection_points_load_warning">Unable to load garbage collection points</string>
-    <string name="permissions_not_granted">Permissions not granted to process the request</string>
+    <string name="all_selected_categories">Places accepting all categories at once</string>
+    <string name="auto_determination">Auto determination</string>
+    <string name="apply_filters">Apply</string>
 
     <string name="waste_categories">Waste categories</string>
     <string name="address">Address</string>
     <string name="schedule">Schedule</string>
     <string name="contacts">Contacts</string>
     <string name="kilometers">km</string>
+    <string name="open_in_maps">Go to map</string>
 
     <string name="paper">Paper</string>
     <string name="glass">Glass</string>
     <string name="plastic">Plastic</string>
     <string name="metal">Metal</string>
 
-    <string name="open_in_maps">Go to map</string>
-    <string name="all_selected_categories">Places accepting all categories at once</string>
-    <string name="auto_determination">Auto determination</string>
-    <string name="apply_filters">Apply</string>
+    <string name="camera_is_not_available">The camera is not available. Requires permission in settings!</string>
+    <string name="server_is_not_available">Server is not available! Try again later.</string>
+    <string name="location_is_not_available">Location not available. Permission required in settings!</string>
+    <string name="no_camera">There is no camera on the device!</string>
 </resources>

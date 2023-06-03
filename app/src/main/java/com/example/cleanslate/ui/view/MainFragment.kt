@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -48,6 +49,8 @@ class MainFragment : Fragment() {
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
+        MapKitFactory.initialize(requireContext())
+
         return binding.root
     }
 
@@ -82,13 +85,14 @@ class MainFragment : Fragment() {
         changeCameraPosition()
 
         binding.mapView.onStop()
+        MapKitFactory.getInstance().onStop()
 
         super.onStop()
     }
 
     override fun onStart() {
         super.onStart()
-
+        MapKitFactory.getInstance().onStart()
         binding.mapView.onStart()
     }
 
@@ -152,7 +156,6 @@ class MainFragment : Fragment() {
 
     }
 
-    // TODO("Добавить изображение маркера")
     private fun addMapObjects() {
         val image = View(requireContext()).apply {
             background = requireContext().getDrawable(R.drawable.ic_baseline_place)
@@ -172,7 +175,11 @@ class MainFragment : Fragment() {
     private fun setMyLocationButton() {
         binding.myLocationButton.setOnClickListener {
             if (checkPermissions()) moveToLocation()
-            else requestPermissions()
+            else Toast.makeText(
+                requireContext(),
+                R.string.location_is_not_available,
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
